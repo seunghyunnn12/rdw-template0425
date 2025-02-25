@@ -1,0 +1,590 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+header .rel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-style: normal;
+    color: #fff;
+}
+
+.header-btn {
+    width: 2.4rem;
+    height: 1.4rem;
+    position: relative;
+}
+
+
+.header-btn span {
+    display: block;
+    content: "";
+    width: 100%;
+    background-color: #fff;
+    height: .2rem;
+    position: absolute;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.header-btn span:nth-child(1) {
+    top: 0;
+}
+
+.header-btn span:nth-child(2) {
+    top: .6rem;
+}
+
+.header-btn span:nth-child(3) {
+    top: 1.2rem;
+}
+
+
+
+.nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: -100%;
+    top: 5rem;
+    gap: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: right .3s;
+    -o-transition: right .3s;
+    transition: right .3s;
+}
+
+.nav-list a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+/* header.navOpen  */
+header.navOpen .nav-list {
+    right: 0%;
+}
+
+/* toggleClass이용해서 구현해보기 */
+
+
+header.navOpen .header-btn span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: .6rem;
+}
+
+header.navOpen .header-btn span:nth-child(2) {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+header.navOpen .header-btn span:nth-child(3) {
+    top: .6rem;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 1 */
+.dep1 {
+    height: 100vh;
+    background: url(../img/winter.jpg) no-repeat center/cover;
+    padding-bottom: 5rem;
+}
+
+.dep1 .rel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dep1 .tit_wrap {
+    color: #fff;
+    /* transform: translateY(3rem); */
+}
+
+.dep1 .tit_wrap>* {
+    opacity: 0;
+}
+
+
+.dep1 .tit_wrap p {
+    margin: 3.2rem 0 6.9rem;
+}
+
+.scroll_ico {
+    width: 2.7rem;
+    display: inline-block;
+    -webkit-animation: scroll-ico 1s infinite alternate;
+    animation: scroll-ico 1s infinite alternate;
+}
+
+@-webkit-keyframes scroll-ico {
+    from {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+
+}
+
+@keyframes scroll-ico {
+    from {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+
+}
+
+.fixedTop {
+    position: fixed;
+    width: 10rem;
+    height: 10rem;
+    background: url(../img/scroll-up.png) no-repeat center/contain;
+    z-index: 3;
+    right: 2rem;
+    bottom: 2rem;
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+
+header.scroll {
+    background-color: rgba(0, 0, 0, 0.29);
+}
+
+header.scroll .fixedTop {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+
+header.scroll.navOpen .nav-list a {
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+
+/* 2  */
+.dep2 .rel {
+    width: 100%;
+    background: url(../img/winter333.png) no-repeat left center/cover;
+}
+
+.dep2 .img_wrap {
+    max-width: 40rem;
+    min-width: 30rem;
+    margin: auto;
+    height: 40rem;
+    margin-bottom: 10rem;
+    background: url(../img/snowman.png) no-repeat left center/110%;
+}
+
+/* 3 */
+.dep3::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 20rem;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(140, 214, 255, 1) 0%, rgba(0, 148, 255, 1) 73%);
+}
+
+.dep3 h1 {
+    color: #7044C2;
+}
+
+.dep3 .img_wrap {
+    max-width: 50rem;
+    min-width: 30.5rem;
+    margin: 3rem auto 0;
+    height: 27rem;
+    background: url(../img/dep3\ snowman.png) no-repeat center /contain;
+}
+
+/* 4 */
+.dep4 {
+    text-align: center;
+}
+
+.dep4 h1 {
+    color: black;
+    position: relative;
+    display: inline-block;
+    padding: 0 3rem;
+}
+
+.dep4 h1:after,
+.dep4 h1::before {
+    display: block;
+    content: "";
+    width: 5.5rem;
+    height: .1rem;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+
+}
+
+.dep4 h1:after {
+    right: -7px;
+}
+
+.dep4 h1 span {
+    display: block;
+}
+
+.dep4 h1 span:nth-child(1) {
+    -webkit-transform: translateX(-3rem);
+    -ms-transform: translateX(-3rem);
+    transform: translateX(-3rem);
+}
+
+.dep4 h1 span:nth-child(2) {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    transform: translateX(1rem);
+}
+
+.dep4_list {
+    margin-top: 7.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.dep4_list li {
+    width: calc(50% - 1rem);
+    min-height: 15rem;
+    max-width: 15rem;
+}
+
+.dep4_list li a {
+    color: white;
+    text-shadow: 0 0 .5rem black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2rem;
+    background: url(../img/winterforest.jpg);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* 5 */
+.dep5 .tit_wrap h1 {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.dep5 .tit_wrap h1::before {
+    width: 124%;
+    height: .1rem;
+    background-color: #000;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 57%;
+    left: -5rem;
+}
+
+.dep5 .tit_wrap h1 span {
+    display: block;
+    font-size: 2.9rem;
+    margin-top: 1rem;
+}
+
+.dep5 .img_wrap {
+    height: 27.5rem;
+    max-width: 36rem;
+    margin: 8rem auto 0;
+}
+
+.dep5 .img_wrap .deco1 {
+    background-image: url(../img/depth5_deco1.png);
+}
+
+.dep5 .img_wrap .deco2 {
+    background-image: url(../img/depth5_deco2.png);
+}
+
+.dep5 .img_wrap .deco3 {
+    background-image: url(../img/depth5_deco3.png);
+}
+
+/* 6 */
+.dep6 {
+    text-align: center;
+}
+
+.dep6::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.7rem;
+    background-color: #f1f1f1;
+    top: calc(50% - 1rem);
+    left: 0;
+}
+
+.dep6 h1 {
+    position: relative;
+    display: inline-block;
+    padding: 0 3rem;
+}
+
+
+.dep6 h1 span {
+    display: block;
+}
+
+.dep6 h1 span:nth-child(1) {
+    -webkit-transform: translateX(-5rem);
+    -ms-transform: translateX(-5rem);
+    transform: translateX(-5rem);
+}
+
+.dep6 h1 span:nth-child(2) {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    transform: translateX(1rem);
+}
+
+.dep6-slide-wrap {
+    max-width: 26rem;
+    margin: 4rem auto;
+}
+
+.dep6-slide-wrap .swiper-slide a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 23rem;
+    height: 23rem;
+    background-color: #b9e3ff;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.655);
+    font-size: 1.4rem;
+    border-radius: 1.2rem;
+    -webkit-transform: scale(.85);
+    -ms-transform: scale(.85);
+    transform: scale(.85);
+}
+
+.dep6-slide-wrap .swiper-slide a .num {
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+
+.dep6-slide-wrap .swiper-button-next:after,
+.dep6-slide-wrap .swiper-button-prev:after {
+    display: none;
+}
+
+.dep6-slide-wrap .btn-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dep6-slide-wrap .swiper-button-next,
+.dep6-slide-wrap .swiper-button-prev {
+    position: static;
+    margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dep6-slide-wrap .swiper-button-next {
+    background-image: url(../img/arr-next.png);
+}
+
+.dep6-slide-wrap .swiper-button-prev {
+    background-image: url(../img/arr-prev.png);
+}
+
+
+.dep6-slide-wrap .swiper-slide-prev a {
+    -webkit-transform: scale(.85) translateX(50%);
+    -ms-transform: scale(.85) translateX(50%);
+    transform: scale(.85) translateX(50%);
+}
+
+.dep6-slide-wrap .swiper-slide-next a {
+    -webkit-transform: scale(.85) translateX(-50%);
+    -ms-transform: scale(.85) translateX(-50%);
+    transform: scale(.85) translateX(-50%);
+}
+
+.dep6-slide-wrap .swiper-slide-active {
+    z-index: 5;
+}
+
+.dep6-slide-wrap .swiper-slide-active a {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background: url(../img/two-snowman.png) no-repeat center/contain;
+}
+
+.dep6-slide-wrap .swiper {
+    overflow: visible;
+}
+
+/* footer  */
+footer {
+    background-color: #b9e3ff;
+    position: relative;
+}
+
+footer .rel {
+
+    padding: 3rem 2rem;
+}
+
+footer h3 {
+    font-weight: 800;
+    letter-spacing: -.1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.foot-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.foot-list li a {
+    background-color: #7044C2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+
+    text-align: center;
+}
+
+footer .copy {
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+}
