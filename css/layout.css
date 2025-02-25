@@ -93,6 +93,7 @@ header h1 {
     width: 7rem;
     height: 7rem;
     color: #fff;
+    text-shadow: 0 0 1rem black;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     -webkit-transition: all .3s;
@@ -216,7 +217,8 @@ header.navOpen .header-btn span:nth-child(3) {
 
 
 header.scroll {
-    background-color: rgba(0, 0, 0, 0.29);
+    background-color: rgb(185, 227, 255, 0.5);
+
 }
 
 header.scroll .fixedTop {
@@ -256,8 +258,8 @@ header.scroll.navOpen .nav-list a {
     bottom: 0;
     position: absolute;
     left: 0;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(140, 214, 255, 1) 0%, rgba(0, 148, 255, 1) 73%);
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,214,255,1) 0%, rgba(255,255,255,1) 76%);
 }
 
 .dep3 h1 {
@@ -541,7 +543,8 @@ header.scroll.navOpen .nav-list a {
 
 /* footer  */
 footer {
-    background-color: #b9e3ff;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,214,255,1) 0%, rgba(255,255,255,1) 76%);
     position: relative;
 }
 
@@ -566,7 +569,7 @@ footer h3 {
 }
 
 .foot-list li a {
-    background-color: #7044C2;
+    background-color: #0267ff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
